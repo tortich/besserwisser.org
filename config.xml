@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns     = "http://www.w3.org/ns/widgets"
+        xmlns:gap = "http://phonegap.com/ns/1.0"
+        id        = "org.die-besserwisser.fuchs"
+        version   = "0.0.1">
+    <name>fuchs</name>
+
+    <description>
+        Hello World sample application that responds to the deviceready event.
+    </description>
+
+    <author href="http://www.die-besserwisser.org" email="info@die-besserwisser.org">
+        die-besserwisser
+    </author>
+
+    <feature name="http://api.phonegap.com/1.0/device" />
+
+    <preference name="phonegap-version" value="2.3.0" />
+    <preference name="orientation"      value="default" />
+    <preference name="target-device"    value="universal" />
+    <preference name="fullscreen"       value="false" />
+    <preference name="splash-screen-duration" value="2000" />
+
+    <icon src="fuchs_ico.png" />
+
+    <gap:splash src="res/screen/android/fuchs_ldpi.png"  gap:platform="android" gap:density="ldpi" />
+    <gap:splash src="res/screen/android/fuchs_mdpi.png"  gap:platform="android" gap:density="mdpi" />
+    <gap:splash src="res/screen/android/fuchs_hdpi.png"  gap:platform="android" gap:density="hdpi" />
+    <gap:splash src="res/screen/android/fuchs_xhdpi.png" gap:platform="android" gap:density="xhdpi" />
+</widget>
