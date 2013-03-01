@@ -21,6 +21,8 @@
     <preference name="fullscreen"       value="false" />
     <preference name="splash-screen-duration" value="2000" />
 
+    <access origin="http://die-besserwisser.org" subdomains="true" />
+
     <icon src="fuchs_ico.png" />
 
     <gap:splash src="res/screen/android/fuchs_ldpi.png"  gap:platform="android" gap:density="ldpi" />
