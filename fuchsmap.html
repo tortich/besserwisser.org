@@ -20,8 +20,6 @@
             mapOptions);
 			
 		/*
-		Sample implementation of placing a marker on the map.
-		
 		I would like to use the /res/screen/mapmarker/fuchspointer.png graphic,
 		but it somehow does not appear on the maps. fuxpointer.png is the same image,
 		but saved without the transparency. 
@@ -29,7 +27,23 @@
 		transparency and works fine. As long as I haven't figured that one out, I am using
 		the non transparent version (fuxpointer.png). - 02.03.2013
 		*/
-			
+		
+		var besserwisserInfoString = '<div id="content">'+
+		'<h2>besserwisser eG</h2>'+
+		'<div id="bodyContent">'+
+		'<p><em>Netzwerk fuer nachhaltigen Lebensstil</em><br>'+
+		'Sa :: 12.00-19.00<br>'+
+		'Hoellgasse 19, 94032 Passau<br>'+
+		'Tel: 0851/22 74 89 21 (sa. 12.00-19.00)<br>'+
+		'E-Mail: hallo(at)die-besserwisser.org<br>'+
+		'zur <a href="http://www.die-besserwisser.org" target="_blank"><em>Infoseite</em></a>'+
+		'</div>'+
+		'</div>';
+
+        var besserwisserinfowindow = new google.maps.InfoWindow({
+            content: besserwisserInfoString
+        });
+		
 		var besserwisserPointer = 'res/screen/mapmarker/fuxpointer.png';
         var besserwisserLatLong = new google.maps.LatLng(48.575528, 13.465749);
         var besserwisserMarker = new google.maps.Marker({
@@ -38,38 +52,39 @@
             icon: besserwisserPointer,
 			title: 'Besserwisser HQ'
         });
+		
+		google.maps.event.addListener(besserwisserMarker, 'click', function() {
+          besserwisserinfowindow.open(map,besserwisserMarker);
+        });
 
 		/* 
 		Sample implementation of an info box belonging to a mapmarker
 		*/
-		var contentString = '<div id="content">'+
-		'<h2>Uluru</h2>'+
+		var biotopInfoString = '<div id="content">'+
+		'<h2>Bio-Top</h2>'+
 		'<div id="bodyContent">'+
-		'<p><b>Uluru</b>, also referred to as <b>Ayers Rock</b>, is a large ' +
-		'(...) ' + 
-		'sandstone rock formation in the southern part of the '+
-		'Heritage Site.</p>'+
-		'<p>Attribution: Uluru, <a href="http://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">'+
-		'http://en.wikipedia.org/w/index.php?title=Uluru</a> '+
-		'(last visited June 22, 2009).</p>'+
+		'<p><em>Fachgeschaeft fuer Naturkost und Vollwertimbiss</em><br>'+
+		'Grabengasse 16, 94032 Passau<br>'+
+		'Tel: 0851/36321<br>'+
+		'zur <a href="http://www.die-besserwisser.org" target="_blank"><em>Infoseite</em></a>'+
 		'</div>'+
 		'</div>';
 
-        var infowindow = new google.maps.InfoWindow({
-            content: contentString
+        var biotopinfowindow = new google.maps.InfoWindow({
+            content: biotopInfoString
         });
 		
-		var image = 'res/screen/mapmarker/beachflag.png';
-        var myLatLng = new google.maps.LatLng(48.578528, 13.465749);
-        var beachMarker = new google.maps.Marker({
-            position: myLatLng,
+		var biotopPointer = 'res/screen/mapmarker/beachflag.png';
+        var biotopLatLng = new google.maps.LatLng(48.574139,13.46132);
+        var biotopMarker = new google.maps.Marker({
+            position: biotopLatLng,
             map: map,
-			title: 'Hellooooooo',
-            icon: image
+			title: 'Bio-Top',
+            icon: biotopPointer
         });
 		
-		google.maps.event.addListener(beachMarker, 'click', function() {
-          infowindow.open(map,beachMarker);
+		google.maps.event.addListener(biotopMarker, 'click', function() {
+          biotopinfowindow.open(map,biotopMarker);
         });
 		
 
