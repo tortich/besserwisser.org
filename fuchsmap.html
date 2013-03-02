@@ -20,14 +20,25 @@
             mapOptions);
 			
 		/*
-		I would like to use the /res/screen/mapmarker/fuchspointer.png graphic,
+		I would like to use /res/screen/mapmarker/fuchspointer.png,
 		but it somehow does not appear on the maps. fuxpointer.png is the same image,
-		but saved without the transparency. 
+		but saved without transparency. 
 		/res/screen/mapmarker/beachflag.png on the other hand was provided by Google, uses
 		transparency and works fine. As long as I haven't figured that one out, I am using
 		the non transparent version (fuxpointer.png). - 02.03.2013
 		*/
-		
+
+    /* Initialising marker images */
+    /* These placeholder imgaes need to be replaced as soon as the correct images are available. */
+    var besserwisserPointer = 'res/screen/mapmarker/fuxpointer.png';
+    var essenPointer = 'res/screen/mapmarker/beachflag.png';
+    var gesundheitPointer = 'res/screen/mapmarker/beachflag.png';
+    var kleidungPointer = 'res/screen/mapmarker/beachflag.png';
+    var eineweltPointer = 'res/screen/mapmarker/beachflag.png';
+    var ausflugPointer = 'res/screen/mapmarker/beachflag.png';
+
+    /* fuchsmap 18 - besserwisser eG*/
+
 		var besserwisserInfoString = '<div id="content">'+
 		'<h2>besserwisser eG</h2>'+
 		'<div id="bodyContent">'+
@@ -40,26 +51,24 @@
 		'</div>'+
 		'</div>';
 
-        var besserwisserinfowindow = new google.maps.InfoWindow({
-            content: besserwisserInfoString
-        });
-		
-		var besserwisserPointer = 'res/screen/mapmarker/fuxpointer.png';
-        var besserwisserLatLong = new google.maps.LatLng(48.575528, 13.465749);
-        var besserwisserMarker = new google.maps.Marker({
-            position: besserwisserLatLong,
-            map: map,
-            icon: besserwisserPointer,
-			title: 'Besserwisser HQ'
-        });
+    var besserwisserinfowindow = new google.maps.InfoWindow({
+        content: besserwisserInfoString
+    });
+
+    var besserwisserLatLong = new google.maps.LatLng(48.575528, 13.465749);
+    var besserwisserMarker = new google.maps.Marker({
+        position: besserwisserLatLong,
+        map: map,
+        icon: besserwisserPointer,
+		    title: 'Besserwisser HQ'
+    });
 		
 		google.maps.event.addListener(besserwisserMarker, 'click', function() {
           besserwisserinfowindow.open(map,besserwisserMarker);
-        });
+    });
 
-		/* 
-		Sample implementation of an info box belonging to a mapmarker
-		*/
+    /* fuchsmap 01 - Bio-Top*/
+
 		var biotopInfoString = '<div id="content">'+
 		'<h2>Bio-Top</h2>'+
 		'<div id="bodyContent">'+
@@ -74,19 +83,47 @@
             content: biotopInfoString
         });
 		
-		var biotopPointer = 'res/screen/mapmarker/beachflag.png';
         var biotopLatLng = new google.maps.LatLng(48.574139,13.46132);
         var biotopMarker = new google.maps.Marker({
             position: biotopLatLng,
             map: map,
-			title: 'Bio-Top',
-            icon: biotopPointer
+            title: 'Bio-Top',
+            icon: essenPointer
         });
 		
 		google.maps.event.addListener(biotopMarker, 'click', function() {
           biotopinfowindow.open(map,biotopMarker);
         });
-		
+
+    /* fuchsmap 09 - apithekee*/
+    
+    var apithekeInfoString = '<div id="content">'+
+    '<h2>Apitheke</h2>'+
+    '<div id="bodyContent">'+
+    '<p><em>Fuer die Gesundheit und die Schoenheit</em><br>'+
+    'Lederergasse 54, 94032 Passau<br>'+
+    'Tel: 0851/9 34 70 05<br>'+
+    'zur <a href="http://www.die-besserwisser.org" target="_blank"><em>Infoseite</em></a>'+
+    '</div>'+
+    '</div>';
+
+        var apithekeinfowindow = new google.maps.InfoWindow({
+            content: apithekeInfoString
+        });
+    
+        var apithekeLatLng = new google.maps.LatLng(48.569537,13.461736);
+        var apithekeMarker = new google.maps.Marker({
+            position: apithekeLatLng,
+            map: map,
+            title: 'Apitheke',
+            icon: gesundheitPointer
+        });
+    
+    google.maps.event.addListener(apithekeMarker, 'click', function() {
+          apithekeinfowindow.open(map,apithekeMarker);
+        });
+
+    /* End fuchsmap 09 */  
 
       }
     </script>
