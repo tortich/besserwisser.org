@@ -13,14 +13,14 @@
       function initialize() {
         var mapOptions = {
           center: new google.maps.LatLng(48.575528, 13.465749),
-          zoom: 17,
+          zoom: 16,
           mapTypeId: google.maps.MapTypeId.ROADMAP
         };
         var map = new google.maps.Map(document.getElementById("map_canvas"),
             mapOptions);
 			
 		/*
-		Sample implementation of two Markers on the Map.
+		Sample implementation of placing a marker on the map.
 		
 		I would like to use the /res/screen/mapmarker/fuchspointer.png graphic,
 		but it somehow does not appear on the maps. fuxpointer.png is the same image,
@@ -35,16 +35,44 @@
         var besserwisserMarker = new google.maps.Marker({
             position: besserwisserLatLong,
             map: map,
-            icon: besserwisserPointer
+            icon: besserwisserPointer,
+			title: 'Besserwisser HQ'
+        });
+
+		/* 
+		Sample implementation of an info box belonging to a mapmarker
+		*/
+		var contentString = '<div id="content">'+
+		'<h2>Uluru</h2>'+
+		'<div id="bodyContent">'+
+		'<p><b>Uluru</b>, also referred to as <b>Ayers Rock</b>, is a large ' +
+		'(...) ' + 
+		'sandstone rock formation in the southern part of the '+
+		'Heritage Site.</p>'+
+		'<p>Attribution: Uluru, <a href="http://en.wikipedia.org/w/index.php?title=Uluru&oldid=297882194">'+
+		'http://en.wikipedia.org/w/index.php?title=Uluru</a> '+
+		'(last visited June 22, 2009).</p>'+
+		'</div>'+
+		'</div>';
+
+        var infowindow = new google.maps.InfoWindow({
+            content: contentString
         });
 		
-        var image = 'res/screen/mapmarker/beachflag.png';
+		var image = 'res/screen/mapmarker/beachflag.png';
         var myLatLng = new google.maps.LatLng(48.578528, 13.465749);
         var beachMarker = new google.maps.Marker({
             position: myLatLng,
             map: map,
+			title: 'Hellooooooo',
             icon: image
         });
+		
+		google.maps.event.addListener(beachMarker, 'click', function() {
+          infowindow.open(map,beachMarker);
+        });
+		
+
       }
     </script>
   </head>
