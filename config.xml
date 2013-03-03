@@ -2,11 +2,11 @@
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
         id        = "org.die-besserwisser.fuchs"
-        version   = "0.0.5">
+        version   = "T.0.8">
     <name>fuchs</name>
 
     <description>
-        Hello World sample application that responds to the deviceready event.
+        besserwisser geolocation service.
     </description>
 
     <author href="http://www.die-besserwisser.org" email="info@die-besserwisser.org">

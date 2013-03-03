@@ -6,13 +6,50 @@
       body { height: 100%; margin: 0; padding: 0 }
       #map_canvas { height: 100% }
     </style>
+
+    <script type="text/javascript" charset="utf-8">
+
+   document.addEventListener("deviceready", onDeviceReady, false);
+
+    var watchID = null;
+    var userLat = null;
+    var userLng = null; 
+
+    function onDeviceReady() {
+        // Update every x seconds (1 second = 1000 )
+        var options = { frequency: 2000 };
+        watchID = navigator.geolocation.watchPosition(onSuccess, onError, options);
+    }
+
+    // onSuccess Geolocation
+    //
+    function onSuccess(position) {
+        var element = document.getElementById('geolocation');
+
+        element.innerHTML = 'Latitude: '  + position.coords.latitude      + '<br />' +
+                            'Longitude: ' + position.coords.longitude     + '<br />' +
+                            'Timestamp: ' + new Date(position.timestamp)          + '<br />' +
+                            '<hr />'      + element.innerHTML;
+    }
+
+    // onError Callback receives a PositionError object
+    //
+    function onError(error) {
+        alert('code: '    + error.code    + '\n' +
+              'message: ' + error.message + '\n');
+    }
+
+    </script>
+
+
     <script type="text/javascript"
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDoX3-G4hBMoyhGuHqIciu593CmITwLaR4&sensor=true">
     </script>
+    
     <script type="text/javascript">
-      function initialize() {
+      function initialize() {       
         var mapOptions = {
-          center: new google.maps.LatLng(48.575528, 13.465749),
+          center: new google.maps.LatLng(userLat, userLng),
           zoom: 16,
           mapTypeId: google.maps.MapTypeId.ROADMAP
         };
@@ -130,7 +167,8 @@
   </head>
   <body onload="initialize()">
 
-    	<div id="map_canvas" style="width:100%; height:100%"></div>
+<!--     	<div id="map_canvas" style="width:100%; height:100%"></div> -->
+    <div id="geolocation">Finding Nemo..</div>
 
   </body>
 </html>
