@@ -2,11 +2,11 @@
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
         id        = "org.die-besserwisser.fuchs"
-        version   = "0.0.8">
+        version   = "0.0.9">
     <name>fuchs digital</name>
 
     <description>
-        Die oeko-soziale Landkarte Passaus.
+        Die &oukl;ko-soziale Landkarte Passaus.
     </description>
 
     <author href="http://www.die-besserwisser.org" email="info@die-besserwisser.org">

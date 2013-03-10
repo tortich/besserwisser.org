@@ -29,8 +29,8 @@
 		*/
 
     /* Initialising marker images */
-    /* These placeholder imgaes need to be replaced as soon as the correct images are available. */
-    var besserwisserPointer = 'res/screen/mapmarker/fuxpointer.png';
+    /* These placeholder images need to be replaced as soon as the correct images are available. */
+    var besserwisserPointer = 'res/screen/mapmarker/fuchspointer.png';
     var ernaehrungPointer = 'res/screen/mapmarker/ernaehrung_kl.png';
     var gesundheitPointer = 'res/screen/mapmarker/gesundheit_kl.png';
     var bekleidungPointer = 'res/screen/mapmarker/bekleidung_kl.png';
@@ -42,9 +42,9 @@
 		var besserwisserInfoString = '<div id="content">'+
 		'<h2>besserwisser eG</h2>'+
 		'<div id="bodyContent">'+
-		'<p><em>Netzwerk fuer nachhaltigen Lebensstil</em><br>'+
+		'<p><em>Netzwerk f&uuml;r nachhaltigen Lebensstil</em><br>'+
 		'Sa :: 12.00-19.00<br>'+
-		'Hoellgasse 19, 94032 Passau<br>'+
+		'H&ouml;llgasse 19, 94032 Passau<br>'+
 		'Tel: 0851/22 74 89 21 (sa. 12.00-19.00)<br>'+
 		'E-Mail: hallo(at)die-besserwisser.org<br>'+
 		'zur <a href="http://www.die-besserwisser.org" target="_blank"><em>Infoseite</em></a>'+
@@ -72,7 +72,7 @@
 		var biotopInfoString = '<div id="content">'+
 		'<h2>Bio-Top</h2>'+
 		'<div id="bodyContent">'+
-		'<p><em>Fachgeschaeft fuer Naturkost und Vollwertimbiss</em><br>'+
+		'<p><em>Fachgesch&auml;ft f&uuml;r Naturkost und Vollwertimbiss</em><br>'+
 		'Grabengasse 16, 94032 Passau<br>'+
 		'Tel: 0851/36321<br>'+
 		'zur <a href="http://www.die-besserwisser.org" target="_blank"><em>Infoseite</em></a>'+
@@ -100,7 +100,7 @@
     var apithekeInfoString = '<div id="content">'+
     '<h2>Apitheke</h2>'+
     '<div id="bodyContent">'+
-    '<p><em>Fuer die Gesundheit und die Schoenheit</em><br>'+
+    '<p><em>F&uuml;r die Gesundheit und die Sch&ouml;nheit</em><br>'+
     'Lederergasse 54, 94032 Passau<br>'+
     'Tel: 0851/9 34 70 05<br>'+
     'zur <a href="http://www.die-besserwisser.org" target="_blank"><em>Infoseite</em></a>'+
@@ -126,9 +126,9 @@
     /* fuchsmap - Hofbaeckerei Gottschaller */
 
     var gottschallerInfoString = '<div id="content">'+
-      '<h2>Hofbaeckerei Gottschaller</h2>'+
+      '<h2>Hofb&auml;ckerei Gottschaller</h2>'+
       '<div id="bodyContent">'+
-      'Gotschall 1, 94094 Rotthalmuenster<br>'+
+      'Gotschall 1, 94094 Rotthalm&uuml;nster<br>'+
       'Tel: <br>'+
       'zur <a href="http://www.die-besserwisser.org" target="_blank"><em>Infoseite</em></a>'+
       '</div>'+
@@ -142,7 +142,7 @@
         var gottschallerMarker = new google.maps.Marker({
             position: gottschallerLatLng,
             map: map,
-            title: 'Hofbaeckerei Gottschaller',
+            title: 'Hofb&auml;ckerei Gottschaller',
             icon: ernaehrungPointer
         });
     
@@ -177,12 +177,12 @@
           kaffeewerkinfowindow.open(map,kaffeewerkMarker);
         });
 
-    /* fuchsmap - &Ouml;kokiste Koeßnach */
+    /* fuchsmap - Oekokiste Koeßnach */
 
     var oekokisteInfoString = '<div id="content">'+
-      '<h2>&Ouml;kokiste Koeßnach</h2>'+
+      '<h2>&Ouml;kokiste K&ouml;&szlig;nach</h2>'+
       '<div id="bodyContent">'+
-      'Untere Dorfstr. 8, 94356 Koeßnach<br>'+
+      'Untere Dorfstr. 8, 94356 K&ouml;&szlig;nach<br>'+
       'Tel: <br>'+
       'zur <a href="http://www.die-besserwisser.org" target="_blank"><em>Infoseite</em></a>'+
       '</div>'+
@@ -196,7 +196,7 @@
         var oekokisteMarker = new google.maps.Marker({
             position: oekokisteLatLng,
             map: map,
-            title: '&Ouml;kokiste Koeßnach',
+            title: '&Ouml;kokiste K&ouml;&szlig;nach',
             icon: ernaehrungPointer
         });
     
@@ -288,7 +288,7 @@
     /* fuchsmap - Metzgerei Kammermeier */
 
     var kammermeierInfoString = '<div id="content">'+
-      '<h2>Metzgerei Kammermeier, Filiale Salzweg</h2>'+
+      '<h2>Metzgerei Kammermeier</h2>'+
       '<div id="bodyContent">'+
       '<p><em>Filiale Salzweg</em><br>'+
       'Anglstr. 9b, 94121 Salzweg<br>'+
@@ -370,9 +370,9 @@
     /* fuchsmap - Zum gruenen Baum */
 
     var gruenerbaumInfoString = '<div id="content">'+
-      '<h2>Zum Gruenen Baum</h2>'+
+      '<h2>Zum Gr&uuml;nen Baum</h2>'+
       '<div id="bodyContent">'+
-      'Hoellgasse 7, 94032 Passau<br>'+
+      'H&ouml;llgasse 7, 94032 Passau<br>'+
       'Tel: <br>'+
       'zur <a href="http://www.die-besserwisser.org" target="_blank"><em>Infoseite</em></a>'+
       '</div>'+
@@ -386,7 +386,7 @@
         var gruenerbaumMarker = new google.maps.Marker({
             position: gruenerbaumLatLng,
             map: map,
-            title: 'Zum gruenen Baum',
+            title: 'Zum gr&uuml;nen Baum',
             icon: ernaehrungPointer
         });
     
@@ -414,7 +414,7 @@
         var biowagnerMarker = new google.maps.Marker({
             position: biowagnerLatLng,
             map: map,
-            title: 'Biobaeckerei Wagner',
+            title: 'Biob&auml;ckerei Wagner',
             icon: ernaehrungPointer
         });
     
@@ -562,7 +562,7 @@
     var hafnergalerieInfoString = '<div id="content">'+
       '<h2>Hafner-Galerie</h2>'+
       '<div id="bodyContent">'+
-      'Michaeligasse 3, 94032 Passau<br>'+
+      'Mich&auml;ligasse 3, 94032 Passau<br>'+
       'Tel: <br>'+
       'zur <a href="http://www.die-besserwisser.org" target="_blank"><em>Infoseite</em></a>'+
       '</div>'+
