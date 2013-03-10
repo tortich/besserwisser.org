@@ -26,8 +26,8 @@
 
     <icon src="res/icon/android/fuchsicon_57px_invertiert.png" />
 
-    <gap:splash src="res/screen/android/fuchslogo_36px_transparent.png"  gap:platform="android" gap:density="ldpi" />
-    <gap:splash src="res/screen/android/fuchslogo_48px_transparent.png"  gap:platform="android" gap:density="mdpi" />
-    <gap:splash src="res/screen/android/fuchslogo_72px_transparent.png"  gap:platform="android" gap:density="hdpi" />
-    <gap:splash src="res/screen/android/fuchslogo_96px_transparent.png" gap:platform="android" gap:density="xhdpi" />
+    <gap:splash src="res/screen/android/fuchslogo_36px_transparent_invertiert.png"  gap:platform="android" gap:density="ldpi" />
+    <gap:splash src="res/screen/android/fuchslogo_48px_transparent_invertiert.png"  gap:platform="android" gap:density="mdpi" />
+    <gap:splash src="res/screen/android/fuchslogo_72px_transparent_invertiert.png"  gap:platform="android" gap:density="hdpi" />
+    <gap:splash src="res/screen/android/fuchslogo_96px_transparent_invertiert.png" gap:platform="android" gap:density="xhdpi" />
 </widget>
