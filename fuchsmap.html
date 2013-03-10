@@ -126,11 +126,11 @@
     /* fuchsmap - Hofbaeckerei Gottschaller */
 
     var gottschallerInfoString = '<div id="content">'+
-      '<h2>Hofbäckerei Gottschaller</h2>'+
+      '<h2>Hofbaeckerei Gottschaller</h2>'+
       '<div id="bodyContent">'+
-      'Gotschall 1, 94094 Rotthalmünster<br>'+
+      'Gotschall 1, 94094 Rotthalmuenster<br>'+
       'Tel: <br>'+
-      'zur <a href="http://www.google.com" target="_blank"><em>Infoseite</em></a>'+
+      'zur <a href="http://www.die-besserwisser.org" target="_blank"><em>Infoseite</em></a>'+
       '</div>'+
       '</div>';
 
@@ -150,7 +150,493 @@
           gottschallerinfowindow.open(map,gottschallerMarker);
         });
 
+    /* fuchsmap - KaffeeWerk */
+
+    var kaffeewerkInfoString = '<div id="content">'+
+      '<h2>KaffeeWerk</h2>'+
+      '<div id="bodyContent">'+
+      'Kirchenplatz 3, 94032 Passau<br>'+
+      'Tel: <br>'+
+      'zur <a href="http://www.die-besserwisser.org" target="_blank"><em>Infoseite</em></a>'+
+      '</div>'+
+      '</div>';
+
+        var kaffeewerkinfowindow = new google.maps.InfoWindow({
+            content: kaffeewerkInfoString
+        });
     
+        var kaffeewerkLatLng = new google.maps.LatLng(48.571101,13.465865);
+        var kaffeewerkMarker = new google.maps.Marker({
+            position: kaffeewerkLatLng,
+            map: map,
+            title: 'KaffeeWerk',
+            icon: ernaehrungPointer
+        });
+    
+    google.maps.event.addListener(kaffeewerkMarker, 'click', function() {
+          kaffeewerkinfowindow.open(map,kaffeewerkMarker);
+        });
+
+    /* fuchsmap - Oekokiste Koeßnach */
+
+    var oekokisteInfoString = '<div id="content">'+
+      '<h2>Oekokiste Koeßnach</h2>'+
+      '<div id="bodyContent">'+
+      'Untere Dorfstr. 8, 94356 Koeßnach<br>'+
+      'Tel: <br>'+
+      'zur <a href="http://www.die-besserwisser.org" target="_blank"><em>Infoseite</em></a>'+
+      '</div>'+
+      '</div>';
+
+        var oekokisteinfowindow = new google.maps.InfoWindow({
+            content: oekokisteInfoString
+        });
+    
+        var oekokisteLatLng = new google.maps.LatLng(48.925883,12.551783);
+        var oekokisteMarker = new google.maps.Marker({
+            position: oekokisteLatLng,
+            map: map,
+            title: 'Oekokiste Koeßnach',
+            icon: ernaehrungPointer
+        });
+    
+    google.maps.event.addListener(oekokisteMarker, 'click', function() {
+          oekokisteinfowindow.open(map,oekokisteMarker);
+        });
+
+    /* fuchsmap - Wochenmarkt Altstadt */
+
+    var womarktaltstadtInfoString = '<div id="content">'+
+      '<h2>Wochenmarkt Altstadt</h2>'+
+      '<div id="bodyContent">'+
+      'Auf dem Domplatz, 94032 Passau<br>'+
+      'Tel: <br>'+
+      'zur <a href="http://www.die-besserwisser.org" target="_blank"><em>Infoseite</em></a>'+
+      '</div>'+
+      '</div>';
+
+        var womarktaltstadtinfowindow = new google.maps.InfoWindow({
+            content: womarktaltstadtInfoString
+        });
+    
+        var womarktaltstadtLatLng = new google.maps.LatLng(48.573177,13.458095);
+        var womarktaltstadtMarker = new google.maps.Marker({
+            position: womarktaltstadtLatLng,
+            map: map,
+            title: 'Wochenmarkt Altstadt',
+            icon: ernaehrungPointer
+        });
+    
+    google.maps.event.addListener(womarktaltstadtMarker, 'click', function() {
+          womarktaltstadtinfowindow.open(map,womarktaltstadtMarker);
+        });
+
+    /* fuchsmap - Neustifter Bauernmarkt */
+
+    var neustbauernmarktInfoString = '<div id="content">'+
+      '<h2>Neustifter Bauernmarkt</h2>'+
+      '<div id="bodyContent">'+
+      'Steinbachstr. (gegenüber vom Real), 94036 Passau<br>'+
+      'Tel: <br>'+
+      'zur <a href="http://www.die-besserwisser.org" target="_blank"><em>Infoseite</em></a>'+
+      '</div>'+
+      '</div>';
+
+        var neustbauernmarktinfowindow = new google.maps.InfoWindow({
+            content: neustbauernmarktInfoString
+        });
+    
+        var neustbauernmarktLatLng = new google.maps.LatLng(48.574463,13.402024);
+        var neustbauernmarktMarker = new google.maps.Marker({
+            position: neustbauernmarktLatLng,
+            map: map,
+            title: 'Neustifter Bauernmarkt',
+            icon: ernaehrungPointer
+        });
+    
+    google.maps.event.addListener(neustbauernmarktMarker, 'click', function() {
+          neustbauernmarktinfowindow.open(map,neustbauernmarktMarker);
+        });
+
+    /* fuchsmap - Auryn Naturkost */
+
+    var aurynInfoString = '<div id="content">'+
+      '<h2>Auryn Naturkost</h2>'+
+      '<div id="bodyContent">'+
+      'Schönauerweg 2, 94036 Passau<br>'+
+      'Tel: <br>'+
+      'zur <a href="http://www.die-besserwisser.org" target="_blank"><em>Infoseite</em></a>'+
+      '</div>'+
+      '</div>';
+
+        var auryninfowindow = new google.maps.InfoWindow({
+            content: aurynInfoString
+        });
+    
+        var aurynLatLng = new google.maps.LatLng(48.56493,13.43176);
+        var aurynMarker = new google.maps.Marker({
+            position: aurynLatLng,
+            map: map,
+            title: 'Auryn Naturkost',
+            icon: ernaehrungPointer
+        });
+    
+    google.maps.event.addListener(aurynMarker, 'click', function() {
+          auryninfowindow.open(map,aurynMarker);
+        });
+
+    /* fuchsmap - Metzgerei Kammermeier */
+
+    var kammermeierInfoString = '<div id="content">'+
+      '<h2>Metzgerei Kammermeier, Filiale Salzweg</h2>'+
+      '<div id="bodyContent">'+
+      '<p><em>Filiale Salzweg</em><br>'+
+      'Anglstr. 9b, 94121 Salzweg<br>'+
+      'Tel: <br>'+
+      'zur <a href="http://www.die-besserwisser.org" target="_blank"><em>Infoseite</em></a>'+
+      '</div>'+
+      '</div>';
+
+        var kammermeierinfowindow = new google.maps.InfoWindow({
+            content: kammermeierInfoString
+        });
+    
+        var kammermeierLatLng = new google.maps.LatLng(48.60962,13.480687);
+        var kammermeierMarker = new google.maps.Marker({
+            position: kammermeierLatLng,
+            map: map,
+            title: 'Metzgerei Kammermeier',
+            icon: ernaehrungPointer
+        });
+    
+    google.maps.event.addListener(kammermeierMarker, 'click', function() {
+          kammermeierinfowindow.open(map,kammermeierMarker);
+        });
+
+    /* fuchsmap - Der mymuesli-Laden */
+
+    var mymuesliInfoString = '<div id="content">'+
+      '<h2>Der mymuesli-Laden</h2>'+
+      '<div id="bodyContent">'+
+      'Rosengasse 2, 94032 Passau<br>'+
+      'Tel: <br>'+
+      'zur <a href="http://www.die-besserwisser.org" target="_blank"><em>Infoseite</em></a>'+
+      '</div>'+
+      '</div>';
+
+        var mymuesliinfowindow = new google.maps.InfoWindow({
+            content: mymuesliInfoString
+        });
+    
+        var mymuesliLatLng = new google.maps.LatLng(48.574199,13.460801);
+        var mymuesliMarker = new google.maps.Marker({
+            position: mymuesliLatLng,
+            map: map,
+            title: 'Der mymuesli-Laden',
+            icon: ernaehrungPointer
+        });
+    
+    google.maps.event.addListener(mymuesliMarker, 'click', function() {
+          mymuesliinfowindow.open(map,mymuesliMarker);
+        });
+
+    /* fuchsmap - Zum Fliegerbauer */
+
+    var fliegerbauerInfoString = '<div id="content">'+
+      '<h2>Zum Fliegerbauer</h2>'+
+      '<div id="bodyContent">'+
+      'Stelzlhof 1, 94034 Passau<br>'+
+      'Tel: <br>'+
+      'zur <a href="http://www.die-besserwisser.org" target="_blank"><em>Infoseite</em></a>'+
+      '</div>'+
+      '</div>';
+
+        var fliegerbauerinfowindow = new google.maps.InfoWindow({
+            content: fliegerbauerInfoString
+        });
+    
+        var fliegerbauerLatLng = new google.maps.LatLng(48.575435,13.421651);
+        var fliegerbauerMarker = new google.maps.Marker({
+            position: fliegerbauerLatLng,
+            map: map,
+            title: 'Zum Fliegerbauer',
+            icon: ernaehrungPointer
+        });
+    
+    google.maps.event.addListener(fliegerbauerMarker, 'click', function() {
+          fliegerbauerinfowindow.open(map,fliegerbauerMarker);
+        });
+
+    /* fuchsmap - Zum gruenen Baum */
+
+    var gruenerbaumInfoString = '<div id="content">'+
+      '<h2>Zum Gruenen Baum</h2>'+
+      '<div id="bodyContent">'+
+      'Hoellgasse 7, 94032 Passau<br>'+
+      'Tel: <br>'+
+      'zur <a href="http://www.die-besserwisser.org" target="_blank"><em>Infoseite</em></a>'+
+      '</div>'+
+      '</div>';
+
+        var gruenerbauminfowindow = new google.maps.InfoWindow({
+            content: gruenerbaumInfoString
+        });
+    
+        var gruenerbaumLatLng = new google.maps.LatLng(48.575217,13.467706);
+        var gruenerbaumMarker = new google.maps.Marker({
+            position: gruenerbaumLatLng,
+            map: map,
+            title: 'Zum gruenen Baum',
+            icon: ernaehrungPointer
+        });
+    
+    google.maps.event.addListener(gruenerbaumMarker, 'click', function() {
+          gruenerbauminfowindow.open(map,gruenerbaumMarker);
+        });
+
+    /* fuchsmap - Biobaeckerei Wagner */
+
+    var biowagnerInfoString = '<div id="content">'+
+      '<h2>Biobäckerei Wagner</h2>'+
+      '<div id="bodyContent">'+
+      '<p><em>Filiale Passau</em><br>'+
+      'Ludwigsplatz 4, 94032 Passau<br>'+
+      'Tel: <br>'+
+      'zur <a href="http://www.die-besserwisser.org" target="_blank"><em>Infoseite</em></a>'+
+      '</div>'+
+      '</div>';
+
+        var biowagnerinfowindow = new google.maps.InfoWindow({
+            content: biowagnerInfoString
+        });
+    
+        var biowagnerLatLng = new google.maps.LatLng(48.574513,13.456639);
+        var biowagnerMarker = new google.maps.Marker({
+            position: biowagnerLatLng,
+            map: map,
+            title: 'Biobaeckerei Wagner',
+            icon: ernaehrungPointer
+        });
+    
+    google.maps.event.addListener(biowagnerMarker, 'click', function() {
+          biowagnerinfowindow.open(map,biowagnerMarker);
+        });
+
+    /* fuchsmap - Engel Apotheke */
+
+    var engelapoInfoString = '<div id="content">'+
+      '<h2>Engel Apotheke</h2>'+
+      '<div id="bodyContent">'+
+      'Bahnhofstr. 10, 94032 Passau<br>'+
+      'Tel: <br>'+
+      'zur <a href="http://www.die-besserwisser.org" target="_blank"><em>Infoseite</em></a>'+
+      '</div>'+
+      '</div>';
+
+        var engelapoinfowindow = new google.maps.InfoWindow({
+            content: engelapoInfoString
+        });
+    
+        var engelapoLatLng = new google.maps.LatLng(48.574236,13.455117);
+        var engelapoMarker = new google.maps.Marker({
+            position: engelapoLatLng,
+            map: map,
+            title: 'Engel Apotheke',
+            icon: gesundheitPointer
+        });
+    
+    google.maps.event.addListener(engelapoMarker, 'click', function() {
+          engelapoinfowindow.open(map,engelapoMarker);
+        });
+
+    /* fuchsmap - Hautnah Kosmetik */
+
+    var hautnahInfoString = '<div id="content">'+
+      '<h2>Hautnah Kosmetik</h2>'+
+      '<div id="bodyContent">'+
+      'Grabengasse 23, 94032 Passau<br>'+
+      'Tel: <br>'+
+      'zur <a href="http://www.die-besserwisser.org" target="_blank"><em>Infoseite</em></a>'+
+      '</div>'+
+      '</div>';
+
+        var hautnahinfowindow = new google.maps.InfoWindow({
+            content: hautnahInfoString
+        });
+    
+        var hautnahLatLng = new google.maps.LatLng(48.574097,13.461834);
+        var hautnahMarker = new google.maps.Marker({
+            position: hautnahLatLng,
+            map: map,
+            title: 'Hautnah Kosmetik',
+            icon: gesundheitPointer
+        });
+    
+    google.maps.event.addListener(hautnahMarker, 'click', function() {
+          hautnahinfowindow.open(map,hautnahMarker);
+        });
+
+    /* fuchsmap - denk bike + outdoor */
+
+    var denkoutdoorInfoString = '<div id="content">'+
+      '<h2>denk bike + outdoor</h2>'+
+      '<div id="bodyContent">'+
+      'Ludwigsstr. 22, 94032 Passau<br>'+
+      'Tel: <br>'+
+      'zur <a href="http://www.die-besserwisser.org" target="_blank"><em>Infoseite</em></a>'+
+      '</div>'+
+      '</div>';
+
+        var denkoutdoorinfowindow = new google.maps.InfoWindow({
+            content: denkoutdoorInfoString
+        });
+    
+        var denkoutdoorLatLng = new google.maps.LatLng(48.574002,13.458631);
+        var denkoutdoorMarker = new google.maps.Marker({
+            position: denkoutdoorLatLng,
+            map: map,
+            title: 'denk bike + outdoor',
+            icon: bekleidungPointer
+        });
+    
+    google.maps.event.addListener(denkoutdoorMarker, 'click', function() {
+          denkoutdoorinfowindow.open(map,denkoutdoorMarker);
+        });
+
+    /* fuchsmap - Kolibri */
+
+    var kolibriInfoString = '<div id="content">'+
+      '<h2>Kolibri</h2>'+
+      '<div id="bodyContent">'+
+      'Theresienstr. 11, 94032 Passau<br>'+
+      'Tel: <br>'+
+      'zur <a href="http://www.die-besserwisser.org" target="_blank"><em>Infoseite</em></a>'+
+      '</div>'+
+      '</div>';
+
+        var kolibriinfowindow = new google.maps.InfoWindow({
+            content: kolibriInfoString
+        });
+    
+        var kolibriLatLng = new google.maps.LatLng(48.573789,13.460757);
+        var kolibriMarker = new google.maps.Marker({
+            position: kolibriLatLng,
+            map: map,
+            title: 'Kolibri',
+            icon: bekleidungPointer
+        });
+    
+    google.maps.event.addListener(kolibriMarker, 'click', function() {
+          kolibriinfowindow.open(map,kolibriMarker);
+        });
+
+    /* fuchsmap - reragu */
+
+    var reraguInfoString = '<div id="content">'+
+      '<h2>reragu</h2>'+
+      '<div id="bodyContent">'+
+      'Schmiedgasse 32, 94032 Passau<br>'+
+      'Tel: <br>'+
+      'zur <a href="http://www.die-besserwisser.org" target="_blank"><em>Infoseite</em></a>'+
+      '</div>'+
+      '</div>';
+
+        var reraguinfowindow = new google.maps.InfoWindow({
+            content: reraguInfoString
+        });
+    
+        var reraguLatLng = new google.maps.LatLng(48.570896,13.469066);
+        var reraguMarker = new google.maps.Marker({
+            position: reraguLatLng,
+            map: map,
+            title: 'reragu',
+            icon: bekleidungPointer
+        });
+    
+    google.maps.event.addListener(reraguMarker, 'click', function() {
+          reraguinfowindow.open(map,reraguMarker);
+        });
+
+    /* fuchsmap - Hafner-Galerie */
+
+    var hafnergalerieInfoString = '<div id="content">'+
+      '<h2>Hafner-Galerie</h2>'+
+      '<div id="bodyContent">'+
+      'Michaeligasse 3, 94032 Passau<br>'+
+      'Tel: <br>'+
+      'zur <a href="http://www.die-besserwisser.org" target="_blank"><em>Infoseite</em></a>'+
+      '</div>'+
+      '</div>';
+
+        var hafnergalerieinfowindow = new google.maps.InfoWindow({
+            content: hafnergalerieInfoString
+        });
+    
+        var hafnergalerieLatLng = new google.maps.LatLng(48.57487,13.47049);
+        var hafnergalerieMarker = new google.maps.Marker({
+            position: hafnergalerieLatLng,
+            map: map,
+            title: 'Hafner-Galerie',
+            icon: lebenwohnenPointer
+        });
+    
+    google.maps.event.addListener(hafnergalerieMarker, 'click', function() {
+          hafnergalerieinfowindow.open(map,hafnergalerieMarker);
+        });
+
+    /* fuchsmap - Weltladen Passau */
+
+    var weltladenpassauInfoString = '<div id="content">'+
+      '<h2>Weltladen Passau</h2>'+
+      '<div id="bodyContent">'+
+      'Kleine Klingergasse 1, 94032 Passau<br>'+
+      'Tel: <br>'+
+      'zur <a href="http://www.die-besserwisser.org" target="_blank"><em>Infoseite</em></a>'+
+      '</div>'+
+      '</div>';
+
+        var weltladenpassauinfowindow = new google.maps.InfoWindow({
+            content: weltladenpassauInfoString
+        });
+    
+        var weltladenpassauLatLng = new google.maps.LatLng(48.575421,13.459317);
+        var weltladenpassauMarker = new google.maps.Marker({
+            position: weltladenpassauLatLng,
+            map: map,
+            title: 'Weltladen Passau',
+            icon: lebenwohnenPointer
+        });
+    
+    google.maps.event.addListener(weltladenpassauMarker, 'click', function() {
+          weltladenpassauinfowindow.open(map,weltladenpassauMarker);
+        });
+
+    /* fuchsmap - Ilztalbahn */
+
+    var ilztalbahnInfoString = '<div id="content">'+
+      '<h2>Ilztalbahn</h2>'+
+      '<div id="bodyContent">'+
+      'Färbergasse 1, 94065 Waldkirchen<br>'+
+      'Tel: <br>'+
+      'zur <a href="http://www.die-besserwisser.org" target="_blank"><em>Infoseite</em></a>'+
+      '</div>'+
+      '</div>';
+
+        var ilztalbahninfowindow = new google.maps.InfoWindow({
+            content: ilztalbahnInfoString
+        });
+    
+        var ilztalbahnLatLng = new google.maps.LatLng(48.730831,13.60238);
+        var ilztalbahnMarker = new google.maps.Marker({
+            position: ilztalbahnLatLng,
+            map: map,
+            title: 'Ilztalbahn',
+            icon: mobilitaetPointer
+        });
+    
+    google.maps.event.addListener(ilztalbahnMarker, 'click', function() {
+          ilztalbahninfowindow.open(map,ilztalbahnMarker);
+        });
 
     /* End fuchsmap */  
 
