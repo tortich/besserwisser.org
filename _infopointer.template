@@ -1,0 +1,24 @@
+    /* fuchsmap - $TITEL$ */
+
+    var $NAME$InfoString = <<infobox hier>>;
+
+        var $NAME$infowindow = new google.maps.InfoWindow({
+            content: $NAME$InfoString
+        });
+    
+        <<var LatLng hier>>
+        var $NAME$Marker = new google.maps.Marker({
+            position: $NAME$LatLng,
+            map: map,
+            title: '$TITEL$',
+            icon: gesundheitPointer			<<passenden pointer auswählen>>
+            icon: ernaehrungPointer
+            icon: bekleidungPointer
+            icon: lebenwohnenPointer
+            icon: mobilitaetPointer
+        });
+    
+    google.maps.event.addListener($NAME$Marker, 'click', function() {
+          $NAME$infowindow.open(map,$NAME$Marker);
+        });
+

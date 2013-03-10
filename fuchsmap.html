@@ -31,13 +31,13 @@
     /* Initialising marker images */
     /* These placeholder imgaes need to be replaced as soon as the correct images are available. */
     var besserwisserPointer = 'res/screen/mapmarker/fuxpointer.png';
-    var essenPointer = 'res/screen/mapmarker/beachflag.png';
-    var gesundheitPointer = 'res/screen/mapmarker/beachflag.png';
-    var kleidungPointer = 'res/screen/mapmarker/beachflag.png';
-    var eineweltPointer = 'res/screen/mapmarker/beachflag.png';
-    var ausflugPointer = 'res/screen/mapmarker/beachflag.png';
+    var ernaehrungPointer = 'res/screen/mapmarker/ernaehrung_kl.png';
+    var gesundheitPointer = 'res/screen/mapmarker/gesundheit_kl.png';
+    var bekleidungPointer = 'res/screen/mapmarker/bekleidung_kl.png';
+    var lebenwohnenPointer = 'res/screen/mapmarker/lebenwohnen_kl.png';
+    var mobilitaetPointer = 'res/screen/mapmarker/mobilitaet_kl.png';
 
-    /* fuchsmap 18 - besserwisser eG*/
+    /* fuchsmap - besserwisser eG*/
 
 		var besserwisserInfoString = '<div id="content">'+
 		'<h2>besserwisser eG</h2>'+
@@ -67,7 +67,7 @@
           besserwisserinfowindow.open(map,besserwisserMarker);
     });
 
-    /* fuchsmap 01 - Bio-Top*/
+    /* fuchsmap - Bio-Top*/
 
 		var biotopInfoString = '<div id="content">'+
 		'<h2>Bio-Top</h2>'+
@@ -88,14 +88,14 @@
             position: biotopLatLng,
             map: map,
             title: 'Bio-Top',
-            icon: essenPointer
+            icon: ernaehrungPointer
         });
 		
 		google.maps.event.addListener(biotopMarker, 'click', function() {
           biotopinfowindow.open(map,biotopMarker);
         });
 
-    /* fuchsmap 09 - apithekee*/
+    /* fuchsmap - apithekee*/
     
     var apithekeInfoString = '<div id="content">'+
     '<h2>Apitheke</h2>'+
@@ -123,7 +123,36 @@
           apithekeinfowindow.open(map,apithekeMarker);
         });
 
-    /* End fuchsmap 09 */  
+    /* fuchsmap - Hofbaeckerei Gottschaller */
+
+    var gottschallerInfoString = '<div id="content">'+
+      '<h2>Hofbäckerei Gottschaller</h2>'+
+      '<div id="bodyContent">'+
+      'Gotschall 1, 94094 Rotthalmünster<br>'+
+      'Tel: <br>'+
+      'zur <a href="http://www.google.com" target="_blank"><em>Infoseite</em></a>'+
+      '</div>'+
+      '</div>';
+
+        var gottschallerinfowindow = new google.maps.InfoWindow({
+            content: gottschallerInfoString
+        });
+    
+        var gottschallerLatLng = new google.maps.LatLng(48.359191,13.202243);
+        var gottschallerMarker = new google.maps.Marker({
+            position: gottschallerLatLng,
+            map: map,
+            title: 'Hofbaeckerei Gottschaller',
+            icon: ernaehrungPointer
+        });
+    
+    google.maps.event.addListener(gottschallerMarker, 'click', function() {
+          gottschallerinfowindow.open(map,gottschallerMarker);
+        });
+
+    
+
+    /* End fuchsmap */  
 
       }
     </script>
