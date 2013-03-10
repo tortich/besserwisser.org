@@ -2,7 +2,7 @@
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
         id        = "org.die-besserwisser.fuchs"
-        version   = "0.0.9">
+        version   = "0.1.0">
     <name>fuchs digital</name>
 
     <description>
@@ -24,7 +24,7 @@
 
     <access origin="http://die-besserwisser.org" subdomains="true" />
 
-    <icon src="fuchs_ico.png" />
+    <icon src="res/icon/android/fuchsicon_57px_invertiert.png" />
 
     <gap:splash src="res/screen/android/fuchs_ldpi.png"  gap:platform="android" gap:density="ldpi" />
     <gap:splash src="res/screen/android/fuchs_mdpi.png"  gap:platform="android" gap:density="mdpi" />
